@@ -81,8 +81,6 @@
 <script>
 import axios from 'axios'
 import Content from './Content.vue'
-const donenv = require("dotenv");
-dotenv.config()
 
 export default {
   name: 'home',
@@ -125,7 +123,7 @@ export default {
   },
   methods: {
     getWeatherInfo() {
-      const url = `https://api.openweathermap.org/data/2.5/weather?q=${this.cityQuery}&appid= process.env.VUE_APP_OPEN_WEATHER_MAP_API_KEY&units=metric`;
+      const url = `https://api.openweathermap.org/data/2.5/weather?q=${this.cityQuery}&appid=79eca4e1208fe4818f31afd082716197&units=metric`;
       axios.get(url).then(res => {
         let data = res.data
         this.weatherInfo = data
